@@ -1,12 +1,7 @@
-
-
-
 from torch import nn, optim
-from transformers import BertModel, BertTokenizer, AdamW, get_linear_schedule_with_warmup
+from transformers import BertModel
 
 PRE_TRAINED_MODEL_NAME = 'bert-base-cased'
-tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL_NAME)
-
 
 class SentimentClassifier(nn.Module):
   def __init__(self, n_classes):
